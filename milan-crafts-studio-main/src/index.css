@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Milan Crochet Design System - Vibrant, Warm, Handmade Feel */
+
+@layer base {
+  :root {
+    /* Background colors */
+    --background: 0 0% 98%;
+    --foreground: 220 13% 13%;
+
+    /* Card colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 13%;
+
+    /* Popover colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 13%;
+
+    /* Primary brand colors - Orange gradient */
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 24 100% 60%;
+    --primary-dark: 24 90% 45%;
+
+    /* Secondary brand colors - Pink gradient */
+    --secondary: 330 81% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 330 85% 65%;
+    --secondary-dark: 330 75% 50%;
+
+    /* Muted colors */
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Accent colors */
+    --accent: 24 100% 95%;
+    --accent-foreground: 24 95% 53%;
+
+    /* Destructive colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success colors */
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+
+    /* Border & input */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 24 95% 53%;
+
+    /* Star rating */
+    --star-rating: 43 96% 56%;
+
+    /* Border radius */
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(330 81% 60%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(24 100% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-glow: 0 0 20px rgba(249, 115, 22, 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 220 13% 13%;
+    --foreground: 0 0% 98%;
+    --card: 220 13% 16%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 13% 16%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 81% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 13% 20%;
+    --muted-foreground: 220 9% 60%;
+    --accent: 24 50% 25%;
+    --accent-foreground: 24 95% 53%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 25%;
+    --input: 220 13% 25%;
+    --ring: 24 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
